@@ -1,0 +1,170 @@
+/* Basic resets */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar-brand {
+    font-size: 24px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+}
+
+/* Header styling */
+.header {
+    background-image: url('Images/2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+/* Ensuring content is centered in the header */
+.header-content {
+    position: relative;
+    z-index: 1; /* Ensure content is above the background image */
+}
+
+.header-content h1 {
+    font-size: 48px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 50px;
+}
+
+.header-content p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.header-content button {
+    background-color: #b71c1c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.header-content button:hover {
+    background-color: #d32f2f;
+}
+
+/* Search Section styling */
+.search-section {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.search-fieldset {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#travel-form {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #b71c1c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 23px;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #d32f2f;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px; /* Ensure space above the footer */
+}
+
+/* Specific styles for About and Login pages */
+.about-container, .login-container {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    background-image: url('Images/about-background.jpg'); /* Background image for About page */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+.login-container {
+    background-image: url('Images/login-background.jpg'); /* Background image for Login page */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}

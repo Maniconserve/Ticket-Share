@@ -1,0 +1,130 @@
+/* Basic resets */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Main container that holds the navbar and footer */
+.container {
+    display: flex;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("Images/2.jpg");
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure it takes up at least the viewport height */
+}
+
+/* Navbar styling */
+.navbar {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.title {
+    width: 120px;
+    cursor: pointer;
+    color: #009688;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+/* Tickets grid styling */
+.tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 85%;
+    margin: 80px auto 20px; /* Adjusted margin to account for fixed navbar */
+}
+
+.ticket {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.ticket:hover {
+    transform: scale(1.05);
+}
+
+.ticket h2 {
+    color: #009688;
+    margin-bottom: 10px;
+}
+
+.ticket p {
+    color: #555;
+    margin: 5px 0;
+}
+
+.book-now {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #009688;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.book-now:hover {
+    background-color: #00796b;
+}
+
+/* Footer styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
